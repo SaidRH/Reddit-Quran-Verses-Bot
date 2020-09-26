@@ -32,6 +32,7 @@ def func():
                 all_lines_variable_filefour[increamentedValue]
     
     reddit.subreddit('PutTheSubredditNameHere').submit(title,selftext)
+    reddit.message('PutTheSubredditNameHere').submit(title,selftext)
 
     
         
