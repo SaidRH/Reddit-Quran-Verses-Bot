@@ -2,7 +2,7 @@ from threading import Thread
 import praw
 
 
-cfile = open("Counter.txt")
+cfile = open("resources/Counter.txt")
 all_lines_variable_cfile = cfile.readlines()
 increamentedValue = int(all_lines_variable_cfile[0])
 
@@ -14,10 +14,10 @@ def func():
                      password='',
                      user_agent='')
 
-    fileone = open("PostTitle.txt", encoding="utf8")
-    filetwo = open("PostBodyAR.txt", encoding="utf8")
-    filethree = open("PostBodyEN.txt", encoding="utf8")
-    filefour = open("Links.txt", encoding="utf8")
+    fileone = open("resources/PostTitle.txt", encoding="utf8")
+    filetwo = open("resources/PostBodyAR.txt", encoding="utf8")
+    filethree = open("resources/PostBodyEN.txt", encoding="utf8")
+    filefour = open("resources/Links.txt", encoding="utf8")
     
     all_lines_variable_fileone = fileone.readlines()
     all_lines_variable_filetwo = filetwo.readlines()
@@ -40,5 +40,5 @@ if __name__ == '__main__':
  Thread(target = func).start()   
 
 increamentedValue+=1
-Cfile = open("Counter.txt","w").write("%d" %increamentedValue)
+Cfile = open("resources/Counter.txt","w").write("%d" %increamentedValue)
 
